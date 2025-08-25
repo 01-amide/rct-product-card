@@ -1,3 +1,4 @@
+// Renders the product price
 import product from "../product"
 
 

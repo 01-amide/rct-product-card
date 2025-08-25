@@ -1,3 +1,4 @@
+// Renders the product name
 import product from "../product"
 
 

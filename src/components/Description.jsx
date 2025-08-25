@@ -1,3 +1,4 @@
+// Renders the product description
 import product from "../product"
 
 

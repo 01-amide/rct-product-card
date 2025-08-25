@@ -1,4 +1,4 @@
-
+// Centralized product data used by presentational components
 let product = {
     name: "Wireless Headphones",
     price:99.99,

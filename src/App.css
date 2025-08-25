@@ -1,3 +1,4 @@
+/* Root container: centers content within a comfortable max width */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,5 +9,54 @@
 
 .product-img{
   height: 200px;
+}
+
+/* Card theming */
+.app-card {
+  width: 20rem;
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(31, 45, 61, 0.12);
+  background: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-inline: auto;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 42px rgba(31, 45, 61, 0.18);
+}
+
+.app-card .card-body {
+  padding: 1.25rem 1.2rem 1.4rem;
+}
+
+.app-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.app-card .card-text {
+  color: #51627a;
+}
+
+/* Gradient primary button for price */
+.price-btn.btn-primary {
+  background: linear-gradient(135deg, #6ea8ff 0%, #2f6efb 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(47, 110, 251, 0.25);
+}
+
+.price-btn.btn-primary:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 10px 26px rgba(47, 110, 251, 0.32);
+}
+
+.greeting {
+  margin-top: 10px;
+  gap: 10px;
 }
 
