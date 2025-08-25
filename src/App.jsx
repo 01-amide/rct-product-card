@@ -9,9 +9,16 @@ import Name from './components/Name';
 import Description from './components/Description';
 import Price from './components/Price';
 
+function capitalize(str) {
+  if (!str) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+
 function App() {
   // Simple friendly prompt to greet the user
-  let userName = prompt("What is your name?")
+  let input = prompt("What is your name?")
+  let userName = capitalize(input)
 
   return (
     <>

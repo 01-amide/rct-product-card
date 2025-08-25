@@ -1,12 +1,76 @@
-# React + Vite
+# rct_card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Bootstrap card showcasing a product with a light, welcoming UI theme.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies:
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+2. Start the dev server:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Open the app in your browser at the URL printed in the terminal.
+
+## Tech Stack
+- React
+- Vite
+- React-Bootstrap / Bootstrap
+- Custom CSS in `src/index.css` and `src/App.css`
+
+## Project Structure
+```
+src/
+  App.jsx          # Renders the product card and greeting
+  App.css          # Component-level styles (card, image, button)
+  index.css        # Global base styles (light gradient background)
+  components/
+    Img.jsx        # Product image
+    Name.jsx       # Product name
+    Price.jsx      # Product price
+    Description.jsx# Product description
+  product.jsx      # Central product data
+```
+
+## Styling Notes
+- The background uses a soft radial gradient for a welcoming feel (`src/index.css`).
+- The card has rounded corners, soft shadows, and a gentle hover lift (`src/App.css`).
+- The price button uses a subtle blue gradient.
+
+### Product Image Behavior
+There are two common ways to display the product image inside the card:
+- Contain (show full image, no cropping):
+  ```css
+  .product-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #f5f9ff;
+  }
+  ```
+- Fixed height (uniform card height). If you want no cropping, use `contain`; for edge-to-edge, use `cover`:
+  ```css
+  .product-img {
+    width: 100%;
+    height: 200px;       /* or your preferred fixed height */
+    object-fit: contain; /* or cover */
+    background: #f5f9ff;
+  }
+  ```
+
+Adjust `.product-img` in `src/App.css` depending on the look you want.
+
+## Customization
+- Update `src/product.jsx` to change the product details and image.
+- Tweak color tokens and typography in `src/index.css`.
+- Modify card spacing, radius, and shadows in `src/App.css`.
+
+
+
+## License
+MIT
